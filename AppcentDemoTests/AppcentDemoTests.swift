@@ -9,6 +9,33 @@ import XCTest
 @testable import AppcentDemo
 
 class AppcentDemoTests: XCTestCase {
+    
+    
+    func testAppcent(){
+        
+        let test = CurriosityViewController()
+        test.getCuriosityRequest()
+        
+        let result = test.getArrayCount()
+        XCTAssertEqual(result, 0)
+    }
+    
+    func test2Appcent(){
+        
+        let test = OppurtunityViewController()
+        let variable = test.currentPage
+        
+        XCTAssertEqual(variable, 1)
+    }
+    
+    func test3Appcent(){
+        
+        let test = SpiritViewController()
+        let carName = test.rover
+        
+        XCTAssertEqual(carName, "spirit")
+        
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
